@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  padding: 0;
+}
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-transform: none;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}

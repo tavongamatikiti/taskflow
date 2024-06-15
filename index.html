@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="dist/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2 class="heading">TaskFlow</h2>
+      </div>
+    </header>
+    <div class="container">
+      <div class="add-item">
+        <button class="add-btn" id="open">Add Task</button>
+      </div>
+      <div class="modal">
+        <div class="modal-tile modal-close">
+          <div class="modal-heading">
+            <div class="modal-heading--title">My New Task</div>
+            <div class="modal-heading--close" id="modal-close">
+              <span class="modal-close"></span>
+              <span class="modal-close"></span>
+            </div>
+          </div>
+          <form id="modal-body">
+            <div class="modal-body">
+              <label for="textInput" class="modal-body--heading"
+                >Task Title</label
+              >
+              <input class="modal-heading--input" id="textInput" type="text" />
+              <div id="message"></div>
+              <label for="dateInput" class="modal-body--heading"
+                >Due Date</label
+              >
+              <input class="modal-heading--input" id="dateInput" type="date" />
+              <label for="text-area" class="modal-body--heading"
+                >Description</label
+              >
+              <textarea
+                class="modal-heading--input"
+                id="textarea"
+                cols="30"
+                rows="5"
+              ></textarea>
+              <div class="modal-btn">
+                <button type="submit" id="add" class="add-task">Add</button>
+                <button type="submit" id="update" class="add-update">
+                  Update
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="task-heading">My Tasks</div>
+    </div>
+    <div class="task" id="tasks">
+      <div class="task-content"></div>
+    </div>
+    <script src="app/js/index.js"></script>
+  </body>
+</html>

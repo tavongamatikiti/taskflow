@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  padding: 0;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-transform: none;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+
+.add-btn {
+  background-color: #5050ac;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  width: 100px;
+}
+.add-update {
+  background-color: #808080;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  margin-left: auto;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+}
+.add-task {
+  background-color: #808080;
+  border: none;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: auto;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+}
+
+@keyframes modalOpen {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes modalClose {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+.modal {
+  display: none;
+  left: 0;
+  margin: 0 auto;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal-close {
+  animation: modalClose 0.3s forwards;
+}
+.modal-tile {
+  animation: modalOpen 0.3s forwards;
+  background-color: rgba(255, 255, 255, 0.82);
+  border-radius: 0.625rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  margin: 10% auto;
+  padding: 1.25rem;
+  width: 37.5rem;
+}
+.modal-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.modal-heading--title {
+  color: #000;
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+.modal-heading--close {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  width: 20px;
+  z-index: 2;
+}
+.modal-heading--close span {
+  background-color: #000000;
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  width: 1.5rem;
+  z-index: 1;
+}
+.modal-heading--close span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+.modal-heading--close span:nth-child(2) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+.modal-btn {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.modal-body {
+  padding: 0 auto;
+}
+
+form input,
+form textarea {
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  margin: 0.625rem auto;
+  max-width: 100%;
+  padding-top: 0.635rem;
+  padding-right: auto;
+  padding-left: auto;
+  padding-bottom: 0.635rem;
+  width: 100%;
+}
+form textarea {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+form label {
+  color: #000;
+  display: block;
+  margin: 0.2rem 0;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 35.9375em) {
+  .task {
+    grid-template-columns: 1fr;
+    gap: 1.85rem;
+  }
+}
+.task-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  margin: 0 auto;
+}
+.task-heading {
+  margin: 1.875rem auto;
+}
+.task--description {
+  font-size: 1.1rem;
+}
+.task-subheading {
+  font-weight: 600;
+  text-align: center;
+}
+.task-options {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/*# sourceMappingURL=style.css.map */

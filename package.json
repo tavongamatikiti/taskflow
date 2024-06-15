@@ -1,0 +1,15 @@
+{
+  "name": "taskflow",
+  "version": "1.0.0",
+  "description": "Todo app with a calendar & modal ",
+  "main": "index.js",
+  "author": "Tavonga Matikiti",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass app/scss/:dist/",
+    "watch:sass": "sass -w app/scss/:dist/"
+  },
+  "dependencies": {
+    "sass": "^1.77.5"
+  }
+}
